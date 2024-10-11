@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+--Light_pink: hsl(275, 100%, 97%);
+--Grayish_purple: hsl(292, 16%, 49%);
+--Dark_purple: hsl(292, 42%, 14%);
+}
+
+body{
+    background-color: var(--Light_pink);
+    background-image: url(/assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 100vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    display: grid;
+    place-content:center;
+
+}
+button{
+    cursor: pointer;
+    background: transparent;
+    width:100%;
+    padding: 1rem 0;
+    text-align: left;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+}
+
+.content{
+    background-color: var(--White);
+    max-width: 800px;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+}
+.head{
+    display: flex;
+    gap: 1rem;
+}
+.head h1{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.accordion-content .accordion:not(:last-child){
+    border-bottom: 2px solid var(--Light_pink);
+}
+
+.accordion .icons img{
+    max-width: 30px;
+}
+
+.accordion .icons .minus-icon{
+    display: none;
+}
+.accordionDespripcion{
+    background-color: var(--White);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-heigth 200ms ease;
+}
+
+.accordionDespripcion p {
+    color: var(--Grayish_purple);
+}
+
+@media (max-width: 540px) {
+    body{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+    }
+}
